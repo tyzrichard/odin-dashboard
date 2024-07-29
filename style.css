@@ -100,23 +100,59 @@ body {
 .header {
     display: grid;
     grid-template-rows: 2fr, 3fr;
+    padding: 2vh 4vw;
+    gap: 3vh
 }
 
-.header > div {
+.header>div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 3%;
+
+}
+
+.searchbar {
+    height: 80%;
+    flex-grow: 1;
+}
+
+.searchbar>div {
+    height: 100%;
+    width: 80%;
+    background-color: #e5e7eb;
+    border-radius: 100px;
+}
+
+.profile {
+    display: grid;
+    grid-template: 2fr 3fr / 75px 25vw;
 }
 
 .profile-picture {
     height: 40px;
     width: 40px;
     border-radius: 100px;
+
+}
+
+.big {
+    height: 55px;
+    width: 55px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.profile :nth-child(3) {
+    font-weight: 700;
+    font-size: 22px;
 }
 
 button {
     border-style: none;
     border-radius: 100px;
     padding: 5px 25px;
+    margin-left: 1vw;
     color: #FFFFFF;
     background-color: #3b82f6;
 }
