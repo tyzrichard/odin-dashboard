@@ -211,6 +211,10 @@ button {
     grid-column: 1 / span 4;
 }
 
+.class-info b {
+    font-size: 16px;
+}
+
 .class.img {
     height: 32px;
     width: 32px;
