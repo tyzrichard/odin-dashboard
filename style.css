@@ -170,8 +170,8 @@ button {
     background-color: #e4e4e7;
     padding: 5vh 2vw;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: 5fr minmax(200px, 2fr);
+    grid-template-rows: repeat(2, min(50%, 350px));
+    grid-template-columns: 5fr minmax(260px, 2fr);
     column-gap: 20px;
     row-gap: 30px;
     font-size: 18px;
@@ -181,6 +181,39 @@ button {
 .classes {
     grid-row-start: 1;
     grid-row-end: 3;
+}
+
+.classes > div {
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.class {
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative; /* Ensure proper stacking context */
+    padding: 25px 20px;
+    border-radius: 8px;
+    border-left: 8px solid #fbbf24;
+    background-color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 500;
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 20px);
+    grid-template-rows: 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+    height: 25vh
+}
+
+.class-info {
+    grid-column: 1 / span 4;
+}
+
+.class.img {
+    height: 32px;
+    width: 32px;
 }
 
 .announcements,
@@ -197,7 +230,7 @@ button {
     flex: 1 1 auto;
     flex-direction: column;
     justify-content: space-between;
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 20px;
     box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); 
     position: relative; /* Ensure proper stacking context */
