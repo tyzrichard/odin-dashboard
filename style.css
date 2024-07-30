@@ -101,17 +101,55 @@ body {
     display: grid;
     grid-template-rows: 2fr, 3fr;
     padding: 30px;
+    grid-template-rows: 2fr 3fr;
+    padding: 2vh 4vw;
+    gap: 3vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    position: relative; /* Ensure proper stacking context */
 }
 
-.header > div {
+.header>div {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    gap: 3%;
+
+}
+
+.searchbar {
+    height: 80%;
+    flex-grow: 1;
+}
+
+.searchbar>div {
+    height: 100%;
+    width: 80%;
+    background-color: #e5e7eb;
+    border-radius: 100px;
+}
+
+.profile {
+    display: grid;
+    grid-template: 2fr 3fr / 75px 25vw;
 }
 
 .profile-picture {
     height: 40px;
     width: 40px;
     border-radius: 100px;
+
+}
+
+.big {
+    height: 55px;
+    width: 55px;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.profile :nth-child(3) {
+    font-weight: 700;
+    font-size: 22px;
 }
 
 .big {
@@ -123,10 +161,59 @@ button {
     border-style: none;
     border-radius: 100px;
     padding: 5px 25px;
+    margin-left: 1vw;
     color: #FFFFFF;
     background-color: #3b82f6;
 }
 
 .content {
     background-color: #e4e4e7;
+    padding: 5vh 2vw;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 5fr minmax(200px, 2fr);
+    column-gap: 20px;
+    row-gap: 30px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.classes {
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.announcements,
+.people {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.announcements > div,
+.people > div {
+    background-color: #FFFFFF;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative; /* Ensure proper stacking context */
+    gap: 10px;
+}
+
+.announcement {
+    font-size: 14px;
+}
+
+.announcement-text {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    background-color: lightgrey;
 }
